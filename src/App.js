@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import Switch from 'react-router-dom';
-import Route from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar';
