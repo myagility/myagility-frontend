@@ -1,9 +1,12 @@
 // @flow
 import React, { Component } from 'react';
+import Switch from 'react-router-dom';
+import Route from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar';
 import Login from './Login';
+import Users from './Users';
 
 
 class App extends Component {
@@ -12,7 +15,11 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <div className="container">
-          <Login />
+          <Switch>
+            <Route exact path='/' component={Login}/>
+            {/* both /roster and /roster/:number begin with /roster */}
+            <Route path='/users' component={Users}/>
+          </Switch>
         </div>
       </div>
     );
